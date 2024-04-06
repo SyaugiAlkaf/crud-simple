@@ -1,0 +1,27 @@
+<!-- views/add.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Siswa</title>
+</head>
+<body>
+    <h1>Tambah Siswa Baru</h1>
+    <% if (error_msg) { %>
+        <p><%= error_msg %></p>
+    <% } %>
+    <form action="/add" method="post">
+        <label for="nis">NIS:</label><br>
+        <input type="text" id="nis" name="nis"><br>
+        <label for="nama">Nama:</label><br>
+        <input type="text" id="nama" name="nama"><br>
+        <label for="alamat">Alamat:</label><br>
+        <input type="text" id="alamat" name="alamat"><br>
+        <label for="hobi">Hobi:</label><br>
+        <input type="text" id="hobi" name="hobi"><br><br>
+        <button type="submit">Tambah</button>
+    </form>
+</body>
+</html>
